@@ -9,7 +9,7 @@ server.on('connection', (socket) =>{
 
         server.clients.forEach((client)=>{
             if(client.readyState === WebSocket.OPEN){
-                client.send(message);
+                client.send(message.toString());//for frontend reciving with string
             }
         });
     });
